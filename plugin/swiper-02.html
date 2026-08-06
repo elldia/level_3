@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스와이퍼 활용-2</title>
+    <!--swiper 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--swiper 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <style>
+        /* 연습용 내부스타일시트(CSS) 위치 */
+        /* swiper 내장 CSS - swiper플러그인에 기본내장된 css는 디자인 시 사용금지 */
+        /* swiper -> overflow:hidden; position:relativie; */
+        /* swiper-wrapper -> position:relative; width:max-content; transform; */
+        /* swiper-slide -> position:relative; (가로크기금지) */
+        /* swiper-button-prev, next는 absolute 기본내장 */
+        /* 여기어때 클론디자인 */
+        .yeogi {
+            width:1200px; margin:100px auto; background-color:#f5f5f5;
+        }
+        .yeogi h1 {}
+        .yeogi .popular_wrap {position:relative;}
+        .yeogi .popular_wrap .popular_prev {transform:translateX(-50px);}
+        .yeogi .popular_wrap .popular_next {transform:translateX(50px);}
+        .yeogi .korea_popular_slide {}
+        .yeogi .korea_popular_slide .swiper-wrapper {}
+        .yeogi .korea_popular_slide .swiper-wrapper .swiper-slide {}
+        .yeogi .korea_popular_slide .swiper-wrapper .swiper-slide a {}
+        .yeogi .korea_popular_slide .swiper-wrapper .swiper-slide a .photo {height:250px; border-radius:8px; overflow:hidden;}
+        .yeogi .korea_popular_slide .swiper-wrapper .swiper-slide a .photo img {width:auto; height:100%;}
+        .yeogi .korea_popular_slide .swiper-wrapper .swiper-slide a h2 {}
+        /* 여기어때 홈쇼핑 패키지 클론디자인 */
+        .yeogi_pakage {
+            width:1200px; margin:0 auto 100px; background-color:#f5f5f5;
+        }
+        .yeogi_pakage h1 {}
+        .yeogi_pakage .shopping_wrap {position:relative;}
+        .yeogi_pakage .shopping_wrap .shp {}
+        .yeogi_pakage .shopping_wrap .shp .swiper-wrapper {}
+        .yeogi_pakage .shopping_wrap .shp .swiper-wrapper .swiper-slide {}
+        .yeogi_pakage .shopping_wrap .shp .swiper-wrapper .swiper-slide a {}
+        .yeogi_pakage .shopping_wrap .shp .swiper-wrapper .swiper-slide a .photo {height:180px; border-radius:10px; overflow:hidden;}
+        .yeogi_pakage .shopping_wrap .shp .swiper-wrapper .swiper-slide a .photo img {width:100%;}
+        .yeogi_pakage .shopping_wrap .shp .swiper-wrapper .swiper-slide a h2 {}
+        .yeogi_pakage .shopping_wrap .shp .swiper-wrapper .swiper-slide a .price {}
+        .yeogi_pakage .shopping_wrap .shp .swiper-wrapper .swiper-slide a .price em {}
+        .yeogi_pakage .shopping_wrap .shp-prev {transform:translateX(-30px);}
+        .yeogi_pakage .shopping_wrap .shp-next {transform:translateX(30px);}
+        /* swiper prev,next 버튼요소는 기본적으로 svg 이미지를 내장하고 있음. */
+        /* prev,next모양은 그대로 색상, 크기만 변경하고 싶은 경우 */
+        /* .yeogi_pakage .shopping_wrap .shp-prev,
+        .yeogi_pakage .shopping_wrap .shp-next {background-color:yellow;}
+        .yeogi_pakage .shopping_wrap .shp-prev svg,
+        .yeogi_pakage .shopping_wrap .shp-next svg {color:red;} */
+        /* prev,next모양을 변경하고 싶은 경우 */
+        .yeogi_pakage .shopping_wrap .shp-prev,
+        .yeogi_pakage .shopping_wrap .shp-next {
+            background-color:yellow; border-radius:50%;
+        }
+        .yeogi_pakage .shopping_wrap .shp-prev svg,
+        .yeogi_pakage .shopping_wrap .shp-next svg {display:none;}
+
+        /* 트립닷컴 클론디자인 */
+
+    </style>
+</head>
+<body>
+    <!-- 여기어때 클론코딩 -->
+    <section class="yeogi">
+        <h1>국내 인기 여행지</h1>
+        <!-- div.swiper.korea_popular_slide>div.swiper-wrapper>div.swiper-slide -->
+        <div class="popular_wrap">
+            <div class="swiper korea_popular_slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide travel1">
+                        <a href="#">
+                            <p class="photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg1svqk8DAZPZ49DaHUeh-URaATSpoZbpYuN2rh4Uh4dLXxKbaEpem1jOp&s=10" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel2">
+                        <a href="#">
+                            <p class="photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg1svqk8DAZPZ49DaHUeh-URaATSpoZbpYuN2rh4Uh4dLXxKbaEpem1jOp&s=10" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel3">
+                        <a href="#">
+                            <p class="photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg1svqk8DAZPZ49DaHUeh-URaATSpoZbpYuN2rh4Uh4dLXxKbaEpem1jOp&s=10" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel4">
+                        <a href="#">
+                            <p class="photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg1svqk8DAZPZ49DaHUeh-URaATSpoZbpYuN2rh4Uh4dLXxKbaEpem1jOp&s=10" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel5">
+                        <a href="#">
+                            <p class="photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg1svqk8DAZPZ49DaHUeh-URaATSpoZbpYuN2rh4Uh4dLXxKbaEpem1jOp&s=10" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel6">
+                        <a href="#">
+                            <p class="photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg1svqk8DAZPZ49DaHUeh-URaATSpoZbpYuN2rh4Uh4dLXxKbaEpem1jOp&s=10" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel7">
+                        <a href="#">
+                            <p class="photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg1svqk8DAZPZ49DaHUeh-URaATSpoZbpYuN2rh4Uh4dLXxKbaEpem1jOp&s=10" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel8">
+                        <a href="#">
+                            <p class="photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg1svqk8DAZPZ49DaHUeh-URaATSpoZbpYuN2rh4Uh4dLXxKbaEpem1jOp&s=10" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel9">
+                        <a href="#">
+                            <p class="photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg1svqk8DAZPZ49DaHUeh-URaATSpoZbpYuN2rh4Uh4dLXxKbaEpem1jOp&s=10" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                    <div class="swiper-slide travel10">
+                        <a href="#">
+                            <p class="photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg1svqk8DAZPZ49DaHUeh-URaATSpoZbpYuN2rh4Uh4dLXxKbaEpem1jOp&s=10" alt=""></p>
+                            <h2>제주도</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev popular_prev"></div>
+            <div class="swiper-button-next popular_next"></div>
+        </div>
+    </section>
+    <section class="yeogi_pakage">
+        <h1>패키지 홈쇼핑 방영상품</h1>
+        <div class="shopping_wrap">
+            <!-- div.swiper.shp>div.swiper-wrapper>div.swiper-slide -->
+            <div class="swiper shp">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide sp1">
+                        <a href="#">
+                            <p class="photo"><img src="https://img1.daumcdn.net/thumb/R1280x0.fwebp/?fname=http://t1.daumcdn.net/brunch/service/user/7gx/image/WulrarrXALf8u8qqvTxGkJ1WCfQ" alt=""></p>
+                            <p class="info">4박 5일 부산 출발</p>
+                            <h2>Hot세일[노팁+6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><em>449,000</em>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide sp2">
+                        <a href="#">
+                            <p class="photo"><img src="https://img1.daumcdn.net/thumb/R1280x0.fwebp/?fname=http://t1.daumcdn.net/brunch/service/user/7gx/image/WulrarrXALf8u8qqvTxGkJ1WCfQ" alt=""></p>
+                            <p class="info">4박 5일 부산 출발</p>
+                            <h2>Hot세일[노팁+6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><em>449,000</em>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide sp3">
+                        <a href="#">
+                            <p class="photo"><img src="https://img1.daumcdn.net/thumb/R1280x0.fwebp/?fname=http://t1.daumcdn.net/brunch/service/user/7gx/image/WulrarrXALf8u8qqvTxGkJ1WCfQ" alt=""></p>
+                            <p class="info">4박 5일 부산 출발</p>
+                            <h2>Hot세일[노팁+6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><em>449,000</em>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide sp4">
+                        <a href="#">
+                            <p class="photo"><img src="https://img1.daumcdn.net/thumb/R1280x0.fwebp/?fname=http://t1.daumcdn.net/brunch/service/user/7gx/image/WulrarrXALf8u8qqvTxGkJ1WCfQ" alt=""></p>
+                            <p class="info">4박 5일 부산 출발</p>
+                            <h2>Hot세일[노팁+6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><em>449,000</em>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide sp5">
+                        <a href="#">
+                            <p class="photo"><img src="https://img1.daumcdn.net/thumb/R1280x0.fwebp/?fname=http://t1.daumcdn.net/brunch/service/user/7gx/image/WulrarrXALf8u8qqvTxGkJ1WCfQ" alt=""></p>
+                            <p class="info">4박 5일 부산 출발</p>
+                            <h2>Hot세일[노팁+6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><em>449,000</em>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide sp6">
+                        <a href="#">
+                            <p class="photo"><img src="https://img1.daumcdn.net/thumb/R1280x0.fwebp/?fname=http://t1.daumcdn.net/brunch/service/user/7gx/image/WulrarrXALf8u8qqvTxGkJ1WCfQ" alt=""></p>
+                            <p class="info">4박 5일 부산 출발</p>
+                            <h2>Hot세일[노팁+6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><em>449,000</em>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide sp7">
+                        <a href="#">
+                            <p class="photo"><img src="https://img1.daumcdn.net/thumb/R1280x0.fwebp/?fname=http://t1.daumcdn.net/brunch/service/user/7gx/image/WulrarrXALf8u8qqvTxGkJ1WCfQ" alt=""></p>
+                            <p class="info">4박 5일 부산 출발</p>
+                            <h2>Hot세일[노팁+6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><em>449,000</em>원</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide sp8">
+                        <a href="#">
+                            <p class="photo"><img src="https://img1.daumcdn.net/thumb/R1280x0.fwebp/?fname=http://t1.daumcdn.net/brunch/service/user/7gx/image/WulrarrXALf8u8qqvTxGkJ1WCfQ" alt=""></p>
+                            <p class="info">4박 5일 부산 출발</p>
+                            <h2>Hot세일[노팁+6대옵션]장가계(직항포함)+부용진</h2>
+                            <p class="price"><em>449,000</em>원</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev shp-prev"></div>
+            <div class="swiper-button-next shp-next"></div>
+        </div>
+    </section>
+    <!-- 트립닷컴 클론코딩 -->
+
+    <script>
+        // 연습용 내부스크립트(JS) 위치
+        // 여기어때 클론스크립트
+        // 패키지
+        const pakageSlide = new Swiper('.shp', {
+            slidesPerView:4,
+            spaceBetween:15,
+            navigation:{
+                prevEl:'.shp-prev',//공통 이름이 아닌 개별이름으로 연결
+                nextEl:'.shp-next',
+            },
+        });
+
+        // 인기상품
+        const yeogiSlide = new Swiper('.korea_popular_slide',{
+            slidesPerView:6,
+            spaceBetween:15,
+            navigation:{
+                prevEl:'.popular_prev',//공통 이름이 아닌 개별이름으로 연결
+                nextEl:'.popular_next',
+            },
+        });
+        // 트립닷컴 클론스크립트
+
+    </script>
+</body>
+</html>
