@@ -65,7 +65,69 @@
         .yeogi_pakage .shopping_wrap .shp-next svg {display:none;}
 
         /* 트립닷컴 클론디자인 */
-
+        .trip_recommend {
+            width:1250px; margin:0 auto 100px;
+        }
+        .trip_recommend .title {}
+        .trip_recommend .title h2 {}
+        .trip_recommend .title .more {}
+        .trip_recommend .recommend_slide {}/* 추천 여행지 슬라이드 시작 */
+        .trip_recommend .recommend_slide .swiper-wrapper {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container {
+            background-image:url(https://weekly.chosun.com/news/photo/202408/36410_62159_3849.gif);
+            background-size:cover; background-position:center;
+            display:flex; flex-flow:column nowrap; height:400px;
+            justify-content: space-between; padding:15px; border-radius:15px; 
+        }/* 상품본문링크 */
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .best_keyword {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .best_keyword img {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .keyword_group {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .keyword_group span {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .keyword_group span img {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .travel_name {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .review_score {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .review_score .score {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .review_score .review {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .wish_trip {
+            position:absolute; right:15px; top:15px;
+        }/* 관심상품(하트) */
+        /* -------------------------트립닷컴 호텔 추천 */
+        .trip_hotel {
+            width:1300px; margin:0 auto 100px;
+        }
+        .trip_hotel .title {}
+        .trip_hotel .title h2 {}
+        .trip_hotel .title .more {}
+        .trip_hotel .all {position:relative;}
+        .trip_hotel .hotel_recom_next {transform:translateX(100px);}
+        .trip_hotel .hotel_recom_prev {transform:translateX(-100px);}
+        .trip_hotel .hotel_recom_page {transform:translateY(50px);}
+        .trip_hotel .hotel_recommend_slide {}
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper {}
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper .swiper-slide {
+            border-radius:10px; border:1px solid #000; overflow:hidden;
+        }
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper .swiper-slide .container {}
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper .swiper-slide .container .photo {
+            background-image:url(https://cdn.travie.com/news/photo/202510/54892_42045_820.jpg);
+            background-size:cover; background-position:center; height:200px;
+        }
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper .swiper-slide .container .info {}
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper .swiper-slide .container .info .details {}
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper .swiper-slide .container .info .details .area {}
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper .swiper-slide .container .info .details h3 {}
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper .swiper-slide .container .info .details h3 .name {}
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper .swiper-slide .container .info .details h3 .level {}
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper .swiper-slide .container .info .details .score_review {}
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper .swiper-slide .container .info .details .score_review .score {}
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper .swiper-slide .container .info .details .score_review .review {}
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper .swiper-slide .container .info .low_price {}
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper .swiper-slide .wish_hotel {
+            position:absolute; right:15px; top:15px;
+        }
+        .trip_hotel .hotel_recommend_slide .swiper-wrapper .swiper-slide .wish_hotel img {}
     </style>
 </head>
 <body>
@@ -219,6 +281,331 @@
         </div>
     </section>
     <!-- 트립닷컴 클론코딩 -->
+    <section class="trip_recommend">
+        <div class="title">
+            <h2>이런 곳은 어떠세요?</h2>
+            <a href="#" class="more">더 보기</a>
+        </div>
+        <div class="swiper recommend_slide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide trip1">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>런던</span>
+                                <span><img src="" alt="인기도">9.8</span>
+                            </p>
+                            <h3 class="travel_name">런던 아이</h3>
+                            <p class="review_score">
+                                <span class="score">4.6/5</span>
+                                <span class="review">리뷰 3,000개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="#" alt="관심여행지등록"></a>
+                </div>
+                <div class="swiper-slide trip2">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>런던</span>
+                                <span><img src="" alt="인기도">9.8</span>
+                            </p>
+                            <h3 class="travel_name">런던 아이</h3>
+                            <p class="review_score">
+                                <span class="score">4.6/5</span>
+                                <span class="review">리뷰 3,000개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="#" alt="관심여행지등록"></a>
+                </div>
+                <div class="swiper-slide trip3">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>런던</span>
+                                <span><img src="" alt="인기도">9.8</span>
+                            </p>
+                            <h3 class="travel_name">런던 아이</h3>
+                            <p class="review_score">
+                                <span class="score">4.6/5</span>
+                                <span class="review">리뷰 3,000개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="#" alt="관심여행지등록"></a>
+                </div>
+                <div class="swiper-slide trip4">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>런던</span>
+                                <span><img src="" alt="인기도">9.8</span>
+                            </p>
+                            <h3 class="travel_name">런던 아이</h3>
+                            <p class="review_score">
+                                <span class="score">4.6/5</span>
+                                <span class="review">리뷰 3,000개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="#" alt="관심여행지등록"></a>
+                </div>
+                <div class="swiper-slide trip5">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>런던</span>
+                                <span><img src="" alt="인기도">9.8</span>
+                            </p>
+                            <h3 class="travel_name">런던 아이</h3>
+                            <p class="review_score">
+                                <span class="score">4.6/5</span>
+                                <span class="review">리뷰 3,000개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="#" alt="관심여행지등록"></a>
+                </div>
+                <div class="swiper-slide trip6">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>런던</span>
+                                <span><img src="" alt="인기도">9.8</span>
+                            </p>
+                            <h3 class="travel_name">런던 아이</h3>
+                            <p class="review_score">
+                                <span class="score">4.6/5</span>
+                                <span class="review">리뷰 3,000개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="#" alt="관심여행지등록"></a>
+                </div>
+                <div class="swiper-slide trip7">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>런던</span>
+                                <span><img src="" alt="인기도">9.8</span>
+                            </p>
+                            <h3 class="travel_name">런던 아이</h3>
+                            <p class="review_score">
+                                <span class="score">4.6/5</span>
+                                <span class="review">리뷰 3,000개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="#" alt="관심여행지등록"></a>
+                </div>
+                <div class="swiper-slide trip8">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="트립닷컴 베스트"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>런던</span>
+                                <span><img src="" alt="인기도">9.8</span>
+                            </p>
+                            <h3 class="travel_name">런던 아이</h3>
+                            <p class="review_score">
+                                <span class="score">4.6/5</span>
+                                <span class="review">리뷰 3,000개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="#" alt="관심여행지등록"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="trip_hotel">
+        <div class="title">
+            <h2>트립닷컴이 엄선한 호텔에서 아늑한 휴식을 즐겨보세요</h2>
+            <a href="#" class="more">더 보기</a>
+        </div>
+        <div class="all">
+            <div class="swiper hotel_recommend_slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide hotel1">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">상하이</p>
+                                    <h3>
+                                        <span class="name">킴튼 치안탄 상하이 바이 IHG</span>
+                                        <span class="level"><img src="" alt=""></span>
+                                    </h3>
+                                    <p class="score_review">
+                                        <span class="score">9.5/10</span>
+                                        <span class="review">리뷰 4,178개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 290,591원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel2">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">상하이</p>
+                                    <h3>
+                                        <span class="name">킴튼 치안탄 상하이 바이 IHG</span>
+                                        <span class="level"><img src="" alt=""></span>
+                                    </h3>
+                                    <p class="score_review">
+                                        <span class="score">9.5/10</span>
+                                        <span class="review">리뷰 4,178개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 290,591원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel3">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">상하이</p>
+                                    <h3>
+                                        <span class="name">킴튼 치안탄 상하이 바이 IHG</span>
+                                        <span class="level"><img src="" alt=""></span>
+                                    </h3>
+                                    <p class="score_review">
+                                        <span class="score">9.5/10</span>
+                                        <span class="review">리뷰 4,178개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 290,591원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel4">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">상하이</p>
+                                    <h3>
+                                        <span class="name">킴튼 치안탄 상하이 바이 IHG</span>
+                                        <span class="level"><img src="" alt=""></span>
+                                    </h3>
+                                    <p class="score_review">
+                                        <span class="score">9.5/10</span>
+                                        <span class="review">리뷰 4,178개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 290,591원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel5">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">상하이</p>
+                                    <h3>
+                                        <span class="name">킴튼 치안탄 상하이 바이 IHG</span>
+                                        <span class="level"><img src="" alt=""></span>
+                                    </h3>
+                                    <p class="score_review">
+                                        <span class="score">9.5/10</span>
+                                        <span class="review">리뷰 4,178개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 290,591원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel6">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">상하이</p>
+                                    <h3>
+                                        <span class="name">킴튼 치안탄 상하이 바이 IHG</span>
+                                        <span class="level"><img src="" alt=""></span>
+                                    </h3>
+                                    <p class="score_review">
+                                        <span class="score">9.5/10</span>
+                                        <span class="review">리뷰 4,178개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 290,591원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel7">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">상하이</p>
+                                    <h3>
+                                        <span class="name">킴튼 치안탄 상하이 바이 IHG</span>
+                                        <span class="level"><img src="" alt=""></span>
+                                    </h3>
+                                    <p class="score_review">
+                                        <span class="score">9.5/10</span>
+                                        <span class="review">리뷰 4,178개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 290,591원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel8">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">상하이</p>
+                                    <h3>
+                                        <span class="name">킴튼 치안탄 상하이 바이 IHG</span>
+                                        <span class="level"><img src="" alt=""></span>
+                                    </h3>
+                                    <p class="score_review">
+                                        <span class="score">9.5/10</span>
+                                        <span class="review">리뷰 4,178개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 290,591원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="" alt="관심호텔등록"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 슬라이드 바깥 디자인 위치 -->
+            <!-- div.swiper-button-prev+div.swiper-button-next -->
+            <div class="swiper-button-prev hotel_recom_prev"></div>
+            <div class="swiper-button-next hotel_recom_next"></div>
+            <div class="swiper-pagination hotel_recom_page"></div>
+            <div class="swiper-scrollbar hotel_recom_scroll"></div>
+        </div>
+    </section>
 
     <script>
         // 연습용 내부스크립트(JS) 위치
@@ -242,7 +629,31 @@
                 nextEl:'.popular_next',
             },
         });
+        
         // 트립닷컴 클론스크립트
+        const tripSlide1 = new Swiper('.recommend_slide',{
+            slidesPerView:4,
+            spaceBetween:20,
+        })
+
+        const hotelTripSlide = new Swiper('.hotel_recommend_slide',{
+            slidesPerView:4,
+            spaceBetween:15,
+            navigation: {
+                nextEl: '.hotel_recom_next',
+                prevEl: '.hotel_recom_prev',
+            },
+            pagination: {
+                el: '.hotel_recom_page',
+                //type:'bullets'(기본)
+                //type:'fraction' (숫자)
+                //type:'progressbar' (바)
+                type:'fraction',
+            },
+            scrollbar: {
+                el: '.hotel_recom_scroll',
+            },
+        })
 
     </script>
 </body>
